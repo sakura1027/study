@@ -12,8 +12,9 @@ import java.util.stream.Collectors;
 
 /**
  * 流与集合的区别
- * 集合面向存储
- * 流面向计算
+ * 1. 集合面向存储 流面向计算
+ * 2. 流只能遍历一次
+ * 3. 集合是外部迭代 而流是内部迭代
  *
  * @author zhaobin11@baidu.com
  */
