@@ -10,7 +10,58 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>a_efficient_programming</module>
+        <module>b_spring</module>
+        <module>c_spring_mvc</module>
+        <module>d_mybatis</module>
+        <module>e_spring_boot</module>
+        <module>f_spring_data_jpa</module>
+        <module>g_spring_cloud</module>
+        <module>h_netty</module>
+        <module>i_zk</module>
+        <module>j_dubbo</module>
+        <module>k_nginx</module>
+        <module>l_rocketmq</module>
+        <module>m_kafka</module>
+        <module>n_mysql</module>
+        <module>o_redis</module>
+        <module>p_es</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
 </project>
