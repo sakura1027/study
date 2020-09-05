@@ -26,6 +26,7 @@
         <module>o_redis</module>
         <module>p_es</module>
         <module>z_common</module>
+        <module>y_leetcode</module>
     </modules>
 
     <!-- 子模块可能的依赖 -->
