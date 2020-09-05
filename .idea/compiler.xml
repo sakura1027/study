@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="a_efficient_programming" />
+        <module name="b_spring" />
+        <module name="c_spring_mvc" />
+        <module name="d_mybatis" />
+        <module name="e_spring_boot" />
+        <module name="f_spring_data_jpa" />
+        <module name="g_spring_cloud" />
+        <module name="h_netty" />
+        <module name="i_zk" />
+        <module name="j_dubbo" />
+        <module name="k_nginx" />
+        <module name="l_rocketmq" />
+        <module name="m_kafka" />
+        <module name="n_mysql" />
+        <module name="o_redis" />
+        <module name="p_es" />
+        <module name="z_common" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
