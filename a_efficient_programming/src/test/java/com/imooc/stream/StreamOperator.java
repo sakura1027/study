@@ -10,6 +10,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * 演示流的各种操作
@@ -57,6 +58,7 @@ public class StreamOperator {
 
     /**
      * 交替执行
+     * peek: 对流进行遍历操作，与forEach类似，但不会销毁流元素
      */
     @Test
     public void peekTest() {
@@ -73,8 +75,104 @@ public class StreamOperator {
                 .forEach(sku -> System.out.println(JsonUtils.toPrettyString(sku)));
     }
 
+    /**
+     * 去重
+     */
     @Test
     public void distinctTest() {
+        skuList.stream()
+                .map(Sku::getSkuCategory)
+                .distinct()
+                .forEach(sku -> System.out.println(JsonUtils.toPrettyString(sku)));
 
+    }
+
+    /**
+     * 跳过
+     */
+    @Test
+    public void skipTest() {
+        skuList.stream()
+                .sorted(Comparator.comparing(Sku::getTotalPrice))
+                .skip(3)
+                .forEach(sku -> System.out.println(JsonUtils.toPrettyString(sku)));
+    }
+
+    /**
+     * 截断
+     */
+    @Test
+    public void limitTest() {
+        skuList.stream()
+                .sorted(Comparator.comparing(Sku::getTotalPrice))
+                .skip(2 * 3) // 类似DB的分页操作
+                .limit(3)
+                .forEach(sku -> System.out.println(JsonUtils.toPrettyString(sku)));
+    }
+
+    /**
+     * 终端操作，短路操作
+     * 所有元素匹配返回true
+     */
+    @Test
+    public void allMatchTest() {
+        System.out.println(skuList.stream()
+                .peek(sku -> System.out.println(sku.getSkuName()))
+                .allMatch(sku -> sku.getTotalPrice() > 100));
+    }
+
+    /**
+     * 任何元素匹配返回true
+     */
+    @Test
+    public void anyMatchTest() {
+        System.out.println(skuList.stream()
+                .peek(sku -> System.out.println(sku.getSkuName()))
+                .anyMatch(sku -> sku.getTotalPrice() > 100));
+    }
+
+    /**
+     * 任何元素都不匹配返回true
+     */
+    @Test
+    public void noneMatchTest() {
+        System.out.println(skuList.stream()
+                .peek(sku -> System.out.println(sku.getSkuName()))
+                .noneMatch(sku -> sku.getTotalPrice() > 10_000));
+    }
+
+    @Test
+    public void findFirstTest() {
+        Optional<Sku> sku = skuList.stream()
+                .findFirst();
+        System.out.println(JsonUtils.toPrettyString(sku.orElse(null)));
+    }
+
+    @Test
+    public void findAnyTest() {
+        Optional<Sku> any = skuList.stream()
+                .findAny();
+        System.out.println(JsonUtils.toPrettyString(any.orElse(null)));
+    }
+
+    @Test
+    public void maxTest() {
+        System.out.println(skuList.stream()
+                .mapToDouble(Sku::getTotalPrice)
+                .max().orElse(0.0));
+    }
+
+    @Test
+    public void minTest() {
+        System.out.println(skuList.stream()
+                .mapToDouble(Sku::getTotalPrice)
+                .min().orElse(0.0));
+    }
+
+    @Test
+    public void countTest() {
+        System.out.println(skuList.stream()
+                .skip(3)
+                .count());
     }
 }
