@@ -5,7 +5,7 @@ import java.util.function.Function;
 /**
  * @author zhaobin11@baidu.com
  */
-public class Main {
+public class Test {
 
     public static void main(String[] args) {
         // 传递行为而非值

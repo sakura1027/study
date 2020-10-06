@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 /**
  * @author zhaobin11@baidu.com
  */
-public class Main {
+public class Test {
 
     public static void main(String[] args) {
         List<Person> personList = Arrays.asList(new Person("huge", 18),

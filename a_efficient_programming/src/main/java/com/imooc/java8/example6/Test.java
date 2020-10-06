@@ -6,7 +6,7 @@ import java.util.function.Function;
 /**
  * @author zhaobin11@baidu.com
  */
-public class Main {
+public class Test {
 
     public static void main(String[] args) {
         System.out.println(fun(2, value -> value * 3, value -> value * value)); // 12
