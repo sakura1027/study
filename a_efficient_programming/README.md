@@ -31,3 +31,29 @@ Stream
 1. 文件/流资源
 2. 套接字资源
 3. 数据库连接资源
+
+@Data注解等于
+1. @Getter
+2. @Setter
+3. @ToString
+4. @EqualsAndHashCode
+
+构造方法
+1. @NoArgsConstructor
+2. @AllArgsConstructor
+3. @RequiredArgsConstructor
+
+@NonNull: 自动生成空值校验
+@Cleanup: 自动调用变量的close方法释放资源
+
+@Builder: 自动生成构造者模式
+必须加上
+1. @NoArgsConstructor
+2. @AllArgsConstructor
+否则会遇到坑
+
+集合变量存在初始化值时必须加上@Builder.Default注解
+
+@Synchronized: 自动生成同步锁
+@SneakyThrows: 自动生成try/catch捕捉异常
+@Slf4j: 自动为类添加日志支持
