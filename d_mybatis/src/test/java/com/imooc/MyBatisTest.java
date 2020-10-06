@@ -1,4 +1,4 @@
-package com.imooc.test;
+package com.imooc;
 
 import com.imooc.dao.IUserDao;
 import com.imooc.domain.User;
