@@ -1,7 +1,7 @@
 package com.imooc;
 
-import com.imooc.dao.IUserDao;
-import com.imooc.domain.User;
+import com.imooc.dao.IEmployeeDao;
+import com.imooc.domain.Employee;
 import com.imooc.utils.JsonUtils;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -36,11 +36,11 @@ public class MyBatisTest {
 
         // 4. SqlSession创建Dao接口的代理对象
         // 代理模式：不修改源码的基础上对已有方法增强
-        IUserDao userDao = session.getMapper(IUserDao.class);
+        IEmployeeDao employeeDao = session.getMapper(IEmployeeDao.class);
 
         // 5. 代理对象执行方法
-        List<User> userList = userDao.findAllByAnnotation();
-        System.out.println(JsonUtils.toPrettyString(userList));
+        List<Employee> employeeList = employeeDao.findAllByAnnotation();
+        System.out.println(JsonUtils.toPrettyString(employeeList));
 
         // 6. 释放资源
         session.close();

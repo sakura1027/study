@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.imooc.dao.IUserDao">
+<mapper namespace="com.imooc.dao.IEmployeeDao">
     <!-- 配置查询所有 -->
-    <select id="findAll" resultType="com.imooc.domain.User">
-        select * from user
+    <select id="findAll" resultType="com.imooc.domain.Employee">
+        select * from employee
     </select>
 </mapper>

@@ -14,7 +14,7 @@
             <dataSource type="POOLED">
                 <!-- 配置连接数据库的4个基本信息 -->
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/easy_mybatis"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/spring_data"/>
                 <property name="username" value="root"/>
                 <property name="password" value="1027"/>
             </dataSource>
@@ -23,6 +23,6 @@
 
     <!-- 指定映射配置文件的位置 -->
     <mappers>
-        <mapper resource="com/imooc/dao/IUserDao.xml"/>
+        <mapper resource="com/imooc/dao/IEmployeeDao.xml"/>
     </mappers>
 </configuration>
