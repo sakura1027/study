@@ -57,3 +57,9 @@ Stream
 @Synchronized: 自动生成同步锁
 @SneakyThrows: 自动生成try/catch捕捉异常
 @Slf4j: 自动为类添加日志支持
+
+线程池可选择的饱和策略
+1. AbortPolicy终止策略（默认）
+2. DiscardPolicy抛弃策略
+3. DiscardOldestPolicy抛弃旧任务策略
+4. CallerRunsPolicy调用者运行策略

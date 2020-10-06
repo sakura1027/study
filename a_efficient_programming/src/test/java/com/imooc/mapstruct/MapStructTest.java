@@ -49,7 +49,6 @@ public class MapStructTest {
         List<PersonDTO> personDTOList = PersonMapper.INSTANCE.domain2dto(people);
         System.out.println(JsonUtils.toPrettyString(personDTOList));
 
-
         person.setName("lyf");
         PersonMapper.INSTANCE.update(person, personDTO);
         System.out.println(JsonUtils.toPrettyString(personDTO));
